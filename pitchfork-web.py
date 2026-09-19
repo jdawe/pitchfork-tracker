@@ -133,6 +133,7 @@ def build_html(tab, genre_filter='', date_from='', date_to=''):
 <style>
 :root {{ color-scheme: dark; }}
 * {{ box-sizing: border-box; }}
+a, button {{ cursor: pointer; }}
 body {{ font: 15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   margin: 0; background: #14151a; color: #e6e7ea; }}
 header {{ position: sticky; top: 0; background: #1b1d24; border-bottom: 1px solid #2a2d37;
@@ -178,7 +179,7 @@ form.filters a.clear:hover {{ color: #ff6b6b; }}
 </style></head>
 <body>
 <header>
-  <a class="home" id="portal-home">← Portal</a>
+  <a class="home" id="portal-home" href="#">← Portal</a>
   <h1>🎧 Pitchfork Tracker</h1>
   <span class="meta">rendered {now.strftime('%b %d %H:%M')}</span>
   <span class="meta">last scrape ~{html.escape(last_scrape or '?')}</span>
